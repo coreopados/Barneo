@@ -1,0 +1,21 @@
+.section-scince-m{
+    .scince-info{
+        .dots-right:after{
+            left: 50%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .section-scince-m .scince-info .dots-right:after {
+        left: 40%;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .section-scince-m .scince-info .dots-right:after {
+        left: 55%;
+    }
+}

@@ -1,0 +1,19 @@
+.section-guests-m{
+    h3.dots-right::after{
+        left: 50%;
+    }
+
+    .left-bottom{
+        max-width: 465px
+    }
+}
+@media screen and (max-width: 1200px){
+    .section-guests-m .scince-info .dots-right:after {
+        left: 40%;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 960px){
+
+}

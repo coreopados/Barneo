@@ -1,0 +1,129 @@
+.section-tourism-m {
+    p.subinfo {
+        margin-bottom: 0;
+    }
+}
+
+.section-tourism-1 {
+    h3 {
+        max-width: 865px;
+    }
+
+    .tourism-1__wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        margin-top: 90px;
+        grid-gap: 55px 15px;
+
+        .link-wrap {
+            border-radius: 15px;
+            background: #779bd6;
+            display: flex;
+            flex-direction: column;
+
+            .img-wrap {
+                border-radius: 15px;
+                overflow: hidden;
+
+                img {
+                    transform: scale(1);
+                    transition: 0.2s;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            a {
+                text-align: center;
+                color: #fff;
+                padding: 30px;
+                display: inline-block;
+            }
+        }
+
+        .link-wrap:hover {
+            .img-wrap {
+                img {
+                    transform: scale(1.05);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
+
+.section-tourism-5 {
+
+    .col-3 {
+        margin-top: 60px;
+
+        .text-block {
+            &__title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 32px;
+            }
+
+            &__text {
+                ul {
+                    li {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .section-tourism-m .dots-right::after {
+        top: 20px;
+        left: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-tourism-1 .tourism-1__wrap {
+        margin-top: 40px;
+    }
+
+    .section-tourism-5 .col-3 .text-block__title {
+        font-size: 18px;
+    }
+
+    .section-tourism-5 .col-3 .text-block__text ul li {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+
+    .section-tourism-1 .tourism-1__wrap {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+
+    .section-tourism-1 .tourism-1__wrap .link-wrap .img-wrap {
+        height: 320px;
+    }
+
+    .section-tourism-1 .tourism-1__wrap .link-wrap a {
+        padding: 12px 20px;
+    }
+
+
+    .section-tourism-3 .tourism-3__wrap {
+        margin-top: 40px;
+    }
+
+    .section-tourism-5 .col-3 {
+        grid-gap: 0;
+        margin-top: 30px;
+    }
+
+}

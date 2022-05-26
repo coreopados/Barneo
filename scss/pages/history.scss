@@ -1,0 +1,112 @@
+.section-history-m{
+    h3.dots-right:after{
+        left: 50%;
+    }
+} 
+.section-history {
+
+
+
+    .wrap-history {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 90px;
+
+        .history-block {
+            display: grid;
+            grid-template-columns: 445px 1fr;
+            grid-gap: 40px;
+
+            &__img {
+
+                img {
+                    display: block;  
+                    border-radius: 15px;
+                }
+            }
+
+            &__text {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                height: 100%;
+                justify-content: center;
+                max-width: 576px;
+                margin-left: auto;
+                p{
+                    line-height: 24px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__text:after {
+                content: url(../img/scince/cloud.png);
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                transform: translateX(-50%);
+
+            }
+
+        }
+
+        .history-block:nth-child(even) {
+            .history-block__img {
+                order: 1;
+            }
+
+            .history-block__text{
+                max-width: 380px;
+                margin-right: auto;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .section-history .wrap-history .history-block{
+        grid-template-columns: 350px 1fr;
+        .history-block__img img{
+            max-height: 440px;
+        }
+    }
+    .section-history-m h3.dots-right:after{
+        left: 40%;
+        top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .section-history-m h3.dots-right:after{
+        left: 65%;
+    }
+}
+@media screen and (max-width: 768px){
+    .section-history .wrap-history{
+        grid-gap: 50px;
+    }
+    .section-history .wrap-history .history-block{
+        grid-template-columns: 1fr;
+    }
+    .section-history .wrap-history .history-block:nth-child(even) .history-block__img{
+        order: unset;
+    }
+    .section-history .wrap-history .history-block .history-block__img img{
+       margin: 0 auto;
+    }
+    .section-history .wrap-history .history-block:nth-child(even) .history-block__text,
+    .section-history .wrap-history .history-block__text{
+        max-width: unset;
+    }
+
+    .section-history .wrap-history .history-block__text p{
+        line-height: 18px;
+    }
+}

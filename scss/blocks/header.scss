@@ -1,0 +1,204 @@
+header {
+    background: #fff;
+
+    .head-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        .menu-wrap {
+            .menu-mobile-button {
+                display: none;
+            }
+
+            nav {
+                .close-menu {
+                    display: none;
+                }
+
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-gap: 0 18px;
+
+                    li {
+                        a.active {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .tablet-soc {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .soc-menu {
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin-right: 10px;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    header .head-wrap .menu-wrap nav .close-menu {
+        display: block;
+    }
+
+    header .head-wrap .menu-wrap nav>ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 530px;
+        width: 310;
+        padding: 55px 55px 30px 55px;
+        background: #a2ceff;
+
+        >li {
+            margin-bottom: 15px;
+
+            a {
+                font-size: 18px;
+            }
+        }
+
+        >li:last-of-type {
+            margin-top: auto;
+            margin-bottom: 0;
+        }
+
+        .tablet-soc {
+            display: flex;
+            padding: 0;
+        }
+    }
+
+    nav {
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 11;
+        transform: translateX(100%);
+        transition: 0.2s;
+
+        .close-menu {
+            position: absolute;
+            top: 22px;
+            right: 25px;
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
+    }
+
+    nav.active {
+        transform: translateX(0);
+        transition: 0.2s;
+    }
+
+    header .head-wrap .menu-wrap .menu-mobile-button {
+        display: flex;
+        align-items: center;
+        width: 46px;
+        height: 35px;
+        cursor: pointer;
+
+        .line {
+            height: 6px;
+            display: block;
+            background: #464b5a;
+            width: 100%;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .line:after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            height: 6px;
+            display: block;
+            background: #464b5a;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .line:before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            height: 6px;
+            display: block;
+            background: #464b5a;
+            width: 100%;
+            border-radius: 2px;
+        }
+    }
+
+    header .container {
+        position: inherit;
+
+        .head-wrap {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+
+            .logo {
+                order: -1;
+
+            }
+
+            .book-button {
+                order: -1;
+                margin-left: auto;
+                margin-right: 55px;
+            }
+
+            >.soc-menu {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .container .head-wrap .logo {
+        max-width: 55px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .container .head-wrap .book-button {
+        display: none;
+    }
+
+    header .head-wrap .menu-wrap .menu-mobile-button {
+        width: 40px;
+    }
+
+    header .head-wrap .menu-wrap .menu-mobile-button .line {
+        height: 5px;
+    }
+
+    header .head-wrap .menu-wrap .menu-mobile-button .line:before {
+        height: 5px;
+    }
+
+    header .head-wrap .menu-wrap .menu-mobile-button .line:after {
+        height: 5px;
+    }
+}
